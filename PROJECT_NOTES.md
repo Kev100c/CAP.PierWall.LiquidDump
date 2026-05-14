@@ -33,3 +33,8 @@ The code is written against the decompiled COI 0.8.4 API details supplied in cha
 - `PierLiquidDumpRemovalValidator.cs`
 
 Send the exact compiler error list to adjust the source.
+
+
+## v003 layout adjustment
+
+The support footprint was changed from 4 x 2 to 2 x 4 and the land-side machine block was aligned with the ocean/support column. This follows the intended liquid-dump geometry: 2 x 4 ocean area, 2 x 4 wall-support area, and 2 x 4 land-side block.

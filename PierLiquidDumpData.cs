@@ -133,7 +133,7 @@ internal sealed class PierLiquidDumpData : IModData {
 	#region Layout
 
 	/// <summary>
-	/// Creates a compact liquid-dump layout that reserves ocean cells and places a non-colliding support layer above the pier wall.
+	/// Creates a compact liquid-dump layout with 2 x 4 ocean cells, 2 x 4 pier-wall support cells, and a 2 x 4 land-side block.
 	/// </summary>
 	private static EntityLayout CreateLayout(ProtoRegistrator registrator) {
 		return registrator.LayoutParser.ParseLayoutOrThrow(
@@ -159,14 +159,16 @@ internal sealed class PierLiquidDumpData : IModData {
 			"~~~~~~         ",
 			"~~~~~~         ",
 			"~~~~~~         ",
-			// Pier-wall support area: 4 x 2 cells. These cells sit above the wall collision volume.
-			"(S)(S)(S)(S)   ",
-			"(S)(S)(S)(S)   ",
+			// Pier-wall support area: 2 x 4 cells. These cells sit above the wall collision volume.
+			"(S)(S)         ",
+			"(S)(S)         ",
+			"(S)(S)         ",
+			"(S)(S)         ",
 			// Land-side machine block: 2 x 4 x 2 with two fluid input ports.
-			"   [2][2]      ",
-			"   [2][2]      ",
-			"   [2][2]A@<   ",
-			"   [2][2]B@<   ");
+			"[2][2]         ",
+			"[2][2]         ",
+			"[2][2]A@<      ",
+			"[2][2]B@<      ");
 	}
 
 	#endregion

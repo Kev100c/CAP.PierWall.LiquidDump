@@ -8,7 +8,6 @@
 #region Usings
 
 using System;
-using Mafi;
 using Mafi.Core;
 using Mafi.Core.Entities.Static;
 using Mafi.Core.Entities.Static.Layout;
@@ -36,17 +35,18 @@ internal static class PierLiquidDumpRules {
 	/// <summary>
 	/// Support cells that must each contain a compatible CAP Pier Wall tile.
 	/// The cells match the (S) support layer in PierLiquidDumpData.CreateLayout.
+	/// The support footprint is 2 x 4, matching the intended liquid-dump wall contact area.
 	/// Each support cell may be provided by a different Pier Wall entity, allowing placement across segment seams.
 	/// </summary>
 	public static readonly RelTile2i[] RequiredPierWallSupportTiles = {
 		new(0, 4),
 		new(1, 4),
-		new(2, 4),
-		new(3, 4),
 		new(0, 5),
 		new(1, 5),
-		new(2, 5),
-		new(3, 5)
+		new(0, 6),
+		new(1, 6),
+		new(0, 7),
+		new(1, 7)
 	};
 
 	#endregion
