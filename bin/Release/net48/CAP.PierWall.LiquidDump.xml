@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CAP.PierWall.LiquidDump</name>
+    </assembly>
+    <members>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpData">
+            <summary>
+            Registers the pier-wall liquid dump machine and its dumping recipes.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpData.RegisterData(Mafi.Core.Mods.ProtoRegistrator)">
+            <summary>
+            Registers all prototypes owned by this data class.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpData.RegisterMachine(Mafi.Core.Mods.ProtoRegistrator)">
+            <summary>
+            Creates and registers the custom pier-wall liquid dump.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpData.CreateLayout(Mafi.Core.Mods.ProtoRegistrator)">
+            <summary>
+            Creates a compact liquid-dump layout that reserves ocean cells and places a non-colliding support layer above the pier wall.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpData.RegisterRecipes(Mafi.Core.Mods.ProtoRegistrator,Mafi.Base.Prototypes.Machines.OceanLiquidDumpProto)">
+            <summary>
+            Registers the dumping recipes for the custom liquid dump.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpIds">
+            <summary>
+            Holds all prototype IDs created by the mod.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpIds.Machines">
+            <summary>
+            Machine IDs created by this mod.
+            </summary>
+        </member>
+        <member name="F:CAP.PierWall.LiquidDump.PierLiquidDumpIds.Machines.PierLiquidDump">
+            <summary>
+            Custom liquid dump that requires CAP Pier Wall support in its support area.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpIds.Recipes">
+            <summary>
+            Recipe IDs created by this mod.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpPlacementValidator">
+            <summary>
+            Addition validator for the custom liquid dump support area.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpPlacementValidator.#ctor(Mafi.Core.Entities.EntitiesManager)">
+            <summary>
+            Creates the validator with access to the current world entities.
+            </summary>
+        </member>
+        <member name="P:CAP.PierWall.LiquidDump.PierLiquidDumpPlacementValidator.Priority">
+            <summary>
+            Uses the default validation priority. This keeps the validator compatible with COI's EntityValidatorPriority type.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpPlacementValidator.CanAdd(Mafi.Core.Entities.Static.Layout.LayoutEntityAddRequest)">
+            <summary>
+            Checks whether the liquid dump is fully supported by compatible pier-wall cells.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpPlacementValidator.HasRequiredPierWallSupport(Mafi.Core.Entities.Static.Layout.LayoutEntityAddRequest)">
+            <summary>
+            Checks every support cell. Cells may be supported by different adjacent Pier Wall entities.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpPlacementValidator.TryFindCompatiblePierWallAt(Mafi.Tile2i)">
+            <summary>
+            Searches all static entities for a compatible Pier Wall occupying the requested support cell.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpRemovalValidator">
+            <summary>
+            Removal validator that keeps supported pier liquid dumps from becoming unsupported when a wall is removed.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRemovalValidator.#ctor(Mafi.Core.Entities.EntitiesManager)">
+            <summary>
+            Creates the validator with access to the current world entities.
+            </summary>
+        </member>
+        <member name="P:CAP.PierWall.LiquidDump.PierLiquidDumpRemovalValidator.Priority">
+            <summary>
+            Uses the default validation priority. This keeps the validator compatible with COI's EntityValidatorPriority type.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRemovalValidator.CanRemove(Mafi.Core.Entities.Static.IStaticEntity,Mafi.Core.Entities.EntityRemoveReason)">
+            <summary>
+            Blocks removal of a compatible pier wall when a custom liquid dump depends on at least one of its cells.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRemovalValidator.SupportsAnyPierLiquidDump(Mafi.Core.Entities.Static.IStaticEntity)">
+            <summary>
+            Checks whether any custom liquid dump uses at least one occupied cell from the wall being removed.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpRules">
+            <summary>
+            Contains deterministic rules for identifying the custom liquid dump and compatible CAP Pier Wall support.
+            </summary>
+        </member>
+        <member name="F:CAP.PierWall.LiquidDump.PierLiquidDumpRules.PierWallIdRequiredParts">
+            <summary>
+            ID parts required on a compatible pier wall prototype.
+            Adjust these strings if the existing CAP Pier Wall mod uses different prototype IDs.
+            </summary>
+        </member>
+        <member name="F:CAP.PierWall.LiquidDump.PierLiquidDumpRules.RequiredPierWallSupportTiles">
+            <summary>
+            Support cells that must each contain a compatible CAP Pier Wall tile.
+            The cells match the (S) support layer in PierLiquidDumpData.CreateLayout.
+            Each support cell may be provided by a different Pier Wall entity, allowing placement across segment seams.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRules.IsPierLiquidDumpProto(Mafi.Core.Entities.Static.Layout.ILayoutEntityProto)">
+            <summary>
+            Returns whether the supplied prototype is the custom CAP Pier Wall liquid dump.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRules.IsCompatiblePierWall(Mafi.Core.Entities.Static.IStaticEntity)">
+            <summary>
+            Returns whether the supplied entity is a compatible CAP Pier Wall support entity.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRules.EntityOccupiesTile(Mafi.Core.Entities.Static.IStaticEntity,Mafi.Tile2i)">
+            <summary>
+            Returns whether an entity occupies the supplied world tile on the XY plane.
+            The support rule intentionally checks cells instead of requiring one specific Pier Wall entity.
+            </summary>
+        </member>
+        <member name="T:CAP.PierWall.LiquidDump.PierWallLiquidDumpMod">
+            <summary>
+            Registers the CAP Pier Wall liquid dump prototypes and recipes.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierWallLiquidDumpMod.#ctor(Mafi.Core.Mods.ModManifest)">
+            <summary>
+            Creates the mod instance when Captain of Industry loads the mod assembly.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierWallLiquidDumpMod.RegisterPrototypes(Mafi.Core.Mods.ProtoRegistrator)">
+            <summary>
+            Registers custom prototypes for the mod.
+            </summary>
+        </member>
+        <member name="M:CAP.PierWall.LiquidDump.PierWallLiquidDumpMod.MigrateJsonConfig(Mafi.VersionSlim,Mafi.Collections.Dict{System.String,System.Object})">
+            <summary>
+            Handles JSON configuration migrations between mod versions.
+            </summary>
+        </member>
+    </members>
+</doc>

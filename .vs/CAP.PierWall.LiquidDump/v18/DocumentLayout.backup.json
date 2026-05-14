@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumpremovalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpremovalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumpplacementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpplacementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PierLiquidDumpRules.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs",
+              "RelativeDocumentMoniker": "PierLiquidDumpRules.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs*",
+              "RelativeToolTip": "PierLiquidDumpRules.cs*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAnwCgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T20:09:59.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PierLiquidDumpRemovalValidator.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRemovalValidator.cs",
+              "RelativeDocumentMoniker": "PierLiquidDumpRemovalValidator.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRemovalValidator.cs",
+              "RelativeToolTip": "PierLiquidDumpRemovalValidator.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAnwE8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T20:06:51.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PierLiquidDumpPlacementValidator.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpPlacementValidator.cs",
+              "RelativeDocumentMoniker": "PierLiquidDumpPlacementValidator.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpPlacementValidator.cs",
+              "RelativeToolTip": "PierLiquidDumpPlacementValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T20:06:29.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PierLiquidDumpData.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
+              "RelativeDocumentMoniker": "PierLiquidDumpData.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
+              "RelativeToolTip": "PierLiquidDumpData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T20:05:27.517Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
