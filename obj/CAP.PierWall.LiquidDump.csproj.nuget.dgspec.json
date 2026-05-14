@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj": {}
+    "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj": {}
   },
   "projects": {
-    "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj": {
+    "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj",
+        "projectUniqueName": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj",
         "projectName": "CAP.PierWall.LiquidDump",
-        "projectPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj",
+        "projectPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump.csproj",
         "packagesPath": "C:\\Users\\LPced\\.nuget\\packages\\",
-        "outputPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\obj\\",
+        "outputPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LPced\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,13 +41,13 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net48": {
           "framework": "net48",
           "targetAlias": "net48",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

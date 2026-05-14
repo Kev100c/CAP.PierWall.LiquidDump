@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\",
+  "WorkspaceRootPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumpremovalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumpremovalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpremovalvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumpplacementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpplacementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumpplacementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpplacementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PierLiquidDumpRules.cs",
-              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs",
               "RelativeDocumentMoniker": "PierLiquidDumpRules.cs",
-              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs*",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs*",
               "RelativeToolTip": "PierLiquidDumpRules.cs*",
-              "ViewState": "AgIAABEAAAAAAAAAAAAnwCgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAnwCkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T20:09:59.069Z",
               "EditorCaption": ""
@@ -45,22 +49,22 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PierLiquidDumpRemovalValidator.cs",
-              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRemovalValidator.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpRemovalValidator.cs",
               "RelativeDocumentMoniker": "PierLiquidDumpRemovalValidator.cs",
-              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpRemovalValidator.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpRemovalValidator.cs",
               "RelativeToolTip": "PierLiquidDumpRemovalValidator.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAnwE8AAAADAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAnwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T20:06:51.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PierLiquidDumpPlacementValidator.cs",
-              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpPlacementValidator.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpPlacementValidator.cs",
               "RelativeDocumentMoniker": "PierLiquidDumpPlacementValidator.cs",
-              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpPlacementValidator.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpPlacementValidator.cs",
               "RelativeToolTip": "PierLiquidDumpPlacementValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -68,15 +72,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PierLiquidDumpData.cs",
-              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
+              "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
               "RelativeDocumentMoniker": "PierLiquidDumpData.cs",
-              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
+              "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
               "RelativeToolTip": "PierLiquidDumpData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:05:27.517Z"
+              "WhenOpened": "2026-05-14T20:05:27.517Z",
+              "EditorCaption": ""
             }
           ]
         }

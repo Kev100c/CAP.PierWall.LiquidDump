@@ -21,7 +21,7 @@
         </member>
         <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpData.CreateLayout(Mafi.Core.Mods.ProtoRegistrator)">
             <summary>
-            Creates a compact liquid-dump layout that reserves ocean cells and places a non-colliding support layer above the pier wall.
+            Creates a compact liquid-dump layout with 2 x 4 ocean cells, 2 x 4 pier-wall support cells, and a 2 x 4 land-side block.
             </summary>
         </member>
         <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpData.RegisterRecipes(Mafi.Core.Mods.ProtoRegistrator,Mafi.Base.Prototypes.Machines.OceanLiquidDumpProto)">
@@ -119,6 +119,7 @@
             <summary>
             Support cells that must each contain a compatible CAP Pier Wall tile.
             The cells match the (S) support layer in PierLiquidDumpData.CreateLayout.
+            The support footprint is 2 x 4, matching the intended liquid-dump wall contact area.
             Each support cell may be provided by a different Pier Wall entity, allowing placement across segment seams.
             </summary>
         </member>

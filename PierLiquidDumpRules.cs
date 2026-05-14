@@ -8,6 +8,7 @@
 #region Usings
 
 using System;
+using Mafi;
 using Mafi.Core;
 using Mafi.Core.Entities.Static;
 using Mafi.Core.Entities.Static.Layout;
