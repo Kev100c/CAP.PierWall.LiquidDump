@@ -40,14 +40,14 @@ internal static class PierLiquidDumpRules {
 	/// Each support cell may be provided by a different Pier Wall entity, allowing placement across segment seams.
 	/// </summary>
 	public static readonly RelTile2i[] RequiredPierWallSupportTiles = {
-		new(0, 4),
-		new(1, 4),
-		new(0, 5),
-		new(1, 5),
-		new(0, 6),
-		new(1, 6),
-		new(0, 7),
-		new(1, 7)
+		new(0, 0),
+		new(1, 0),
+		new(0, 1),
+		new(1, 1),
+		new(0, 2),
+		new(1, 2),
+		new(0, 3),
+		new(1, 3)
 	};
 
 	#endregion

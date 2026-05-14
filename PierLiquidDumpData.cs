@@ -68,7 +68,7 @@ internal sealed class PierLiquidDumpData : IModData {
 
 		// Ocean area behind the pier wall: 2 tiles wide and 4 tiles long.
 		RectangleTerrainArea2iRelative reservedOceanArea = new(
-			new RelTile2i(0, 0),
+			new RelTile2i(-5, -2),		//Offset
 			new RelTile2i(2, 4));
 
 		HeightTilesI minGroundHeight = new(1);
@@ -144,8 +144,8 @@ internal sealed class PierLiquidDumpData : IModData {
 					new(
 						"~~~",
 						(EntityLayoutParams p, int h) => new LayoutTokenSpec(
-							heightFrom: -12,
-							heightToExcl: -10,
+							heightFrom: 0,
+							heightToExcl: 1,
 							constraint: LayoutTileConstraint.Ocean)),
 					new(
 						"(S)",
@@ -154,21 +154,10 @@ internal sealed class PierLiquidDumpData : IModData {
 							heightToExcl: 2,
 							constraint: LayoutTileConstraint.None))
 				}),
-			// Ocean side: 2 x 4 ocean area behind the wall.
-			"~~~~~~         ",
-			"~~~~~~         ",
-			"~~~~~~         ",
-			"~~~~~~         ",
-			// Pier-wall support area: 2 x 4 cells. These cells sit above the wall collision volume.
-			"(S)(S)         ",
-			"(S)(S)         ",
-			"(S)(S)         ",
-			"(S)(S)         ",
-			// Land-side machine block: 2 x 4 x 2 with two fluid input ports.
-			"[2][2]         ",
-			"[2][2]         ",
-			"[2][2]A@<      ",
-			"[2][2]B@<      ");
+            "~~~~~~(S)(S)[2][2]         ",
+            "~~~~~~(S)(S)[2][2]A@<      ",
+            "~~~~~~(S)(S)[2][2]B@<      ",
+            "~~~~~~(S)(S)[2][2]         ");
 	}
 
 	#endregion
