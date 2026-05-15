@@ -29,8 +29,9 @@ internal static class PierLiquidDumpRules {
 	/// Adjust these strings if the existing CAP Pier Wall mod uses different prototype IDs.
 	/// </summary>
 	private static readonly string[] PierWallIdRequiredParts = {
-		"CAP",
-		"PierWall"
+		//"CAP",
+		"Pier",
+		"Wall"
 	};
 
 	/// <summary>
@@ -40,14 +41,14 @@ internal static class PierLiquidDumpRules {
 	/// Each support cell may be provided by a different Pier Wall entity, allowing placement across segment seams.
 	/// </summary>
 	public static readonly RelTile2i[] RequiredPierWallSupportTiles = {
-		new(0, 0),
-		new(1, 0),
-		new(0, 1),
-		new(1, 1),
-		new(0, 2),
-		new(1, 2),
-		new(0, 3),
-		new(1, 3)
+		new(2, 0),
+		new(3, 0),
+		new(2, 1),
+		new(3, 1),
+		new(2, 2),
+		new(3, 2),
+		new(2, 3),
+		new(3, 3)
 	};
 
 	#endregion

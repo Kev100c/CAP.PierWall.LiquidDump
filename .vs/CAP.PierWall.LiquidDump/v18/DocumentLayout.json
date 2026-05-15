@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumpdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|solutionrelative:pierliquiddumprules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD5F57BF-F46F-4C06-9B79-B0DC69D5F1D0}|CAP.PierWall.LiquidDump.csproj|e:\\programieren\\4_coi-mods\\cap.pierwall.liquiddump\\cap.pierwall.liquiddump\\pierliquiddumpids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -42,18 +42,17 @@
               "RelativeToolTip": "PierLiquidDumpIds.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T21:22:46.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T21:22:46.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PierLiquidDumpRules.cs",
               "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs",
               "RelativeDocumentMoniker": "PierLiquidDumpRules.cs",
               "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpRules.cs",
               "RelativeToolTip": "PierLiquidDumpRules.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAC8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T20:09:59.069Z",
               "EditorCaption": ""
@@ -68,8 +67,7 @@
               "RelativeToolTip": "PierLiquidDumpRemovalValidator.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAnwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:06:51.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T20:06:51.773Z"
             },
             {
               "$type": "Document",
@@ -85,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PierLiquidDumpData.cs",
               "DocumentMoniker": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
               "RelativeDocumentMoniker": "PierLiquidDumpData.cs",
               "ToolTip": "E:\\Programieren\\4_COI-Mods\\CAP.PierWall.LiquidDump\\CAP.PierWall.LiquidDump\\PierLiquidDumpData.cs",
               "RelativeToolTip": "PierLiquidDumpData.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAAAKMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAEkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-14T20:05:27.517Z",
               "EditorCaption": ""
