@@ -93,10 +93,11 @@ internal sealed class PierLiquidDumpData : IModData {
 				null,
 				(RecipeProto recipe) => recipe.AllInputs.First.Product.Graphics.Color));
 
-		Option<string> machineSoundPrefabPath = "Assets/Base/Machines/Water/WasteDump/WasteDump_Sound.prefab";
+        Option<string> machineSoundPrefabPath = "Assets/CAP/PierWall/LiquidDump/CAP_PierWall_LiquidDump.prefab";
+		//
 
 		MachineProto.Gfx graphics = new(
-			"Assets/Base/Machines/Water/WasteDump.prefab",
+            "Assets/Base/Machines/Water/WasteDump/WasteDump_Sound.prefab",
 			categories,
 			prefabOffset,
 			default(Option<string>),
