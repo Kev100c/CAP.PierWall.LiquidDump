@@ -5,7 +5,7 @@
   "description_short": "Adds a liquid dump that requires CAP Pier Wall support tiles.",
   "authors": [ "CAP" ],
   "primary_dlls": [ "CAP.PierWall.LiquidDump.dll" ],
-  "optional_mod_dependencies": [ "CAP-PierWall" ],
+  "mod_dependencies": [ "CAP-PierWall" ],
   "non_locking_dll_load": true,
   "can_add_to_saved_game": true,
   "can_remove_from_saved_game": false,
