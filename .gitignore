@@ -1,0 +1,33 @@
+#region Visual Studio / Build Output
+.vs/
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.suo
+*.rsuser
+#endregion
+
+#region Build Artifacts
+*.dll
+*.pdb
+*.xml
+*.cache
+*.log
+#endregion
+
+#region Unity / Asset Build Output optional
+Library/
+Temp/
+Logs/
+UserSettings/
+AssetBundles/
+#endregion
+
+#region OS
+.DS_Store
+Thumbs.db
+#endregion
+
+# Reference note: Created with support from GPT (ChatGPT / GPT-5.5 Thinking).
