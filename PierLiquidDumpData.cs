@@ -91,7 +91,7 @@ internal sealed class PierLiquidDumpData : IModData {
 				"WasteParticles_A",
 				useUtilizationOnAlpha: false,
                 recipesSelector: null,
-				(RecipeProto recipe) => recipe.AllInputs.First.Product.Graphics.Color),
+                (RecipeProto recipe) => recipe.AllInputs.First.Product.Graphics.Color),
             ParticlesParams.Loop(
                 "WasteParticles_B",
                 useUtilizationOnAlpha: false,
@@ -101,12 +101,17 @@ internal sealed class PierLiquidDumpData : IModData {
         // Reusing the waste dump sound prefab for the pier liquid dump, as it fits thematically and there are no custom sounds needed.
         Option<string> machineSoundPrefabPath =
             "Assets/Base/Machines/Water/WasteDump/WasteDump_Sound.prefab";
+
+        // Custom icon for the pier liquid dump, as the default waste dump icon may not clearly represent the new machine's function and context.
+        Option<string> customIconPath =
+			"Assets/CAP/PierWall/LiquidDump/Icons/CAP_PierWall_LiquidDump_icon.png";
+
         // Note: Instanced rendering is disabled for this machine due to the use of particle effects and potential visual complexity, which may not benefit from instancing and could require unique rendering per instance.
         MachineProto.Gfx graphics = new(
             "Assets/CAP/PierWall/LiquidDump/CAP_PierWall_LiquidDump.prefab",
             categories,
             prefabOffset,
-            default(Option<string>),
+            customIconPath,
             particlesParams,
             default(ImmutableArray<EmissionParams>),
             machineSoundPrefabPath,
