@@ -28,11 +28,13 @@ internal static class PierLiquidDumpRules {
 	/// ID parts required on a compatible pier wall prototype.
 	/// Adjust these strings if the existing CAP Pier Wall mod uses different prototype IDs.
 	/// </summary>
-	private static readonly string[] PierWallIdRequiredParts = {
-		//"CAP",
-		"Pier",
-		"Wall"
-	};
+	private static readonly string[] CompatiblePierWallIdTokens = [
+		"PierWallStraight1",
+		"PierWallStraight4",
+		"PierWallCorner",
+		"PierWallCross",
+		"PierWallTee"
+	];
 
 	/// <summary>
 	/// Support cells that must each contain a compatible CAP Pier Wall tile.
@@ -40,7 +42,7 @@ internal static class PierLiquidDumpRules {
 	/// The support footprint is 2 x 4, matching the intended liquid-dump wall contact area.
 	/// Each support cell may be provided by a different Pier Wall entity, allowing placement across segment seams.
 	/// </summary>
-	public static readonly RelTile2i[] RequiredPierWallSupportTiles = {
+	public static readonly RelTile2i[] RequiredPierWallSupportTiles = [
 		new(2, 0),
 		new(3, 0),
 		new(2, 1),
@@ -49,7 +51,7 @@ internal static class PierLiquidDumpRules {
 		new(3, 2),
 		new(2, 3),
 		new(3, 3)
-	};
+	];
 
 	#endregion
 
@@ -78,15 +80,15 @@ internal static class PierLiquidDumpRules {
             return false;
         }
 
-        foreach (string requiredPart in PierWallIdRequiredParts)
+        foreach (string compatibleToken in CompatiblePierWallIdTokens)
         {
-            if (id.IndexOf(requiredPart, StringComparison.OrdinalIgnoreCase) < 0)
+            if (id.IndexOf(compatibleToken, StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     #endregion

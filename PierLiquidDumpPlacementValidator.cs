@@ -22,32 +22,27 @@ namespace CAP.PierWall.LiquidDump;
 /// <summary>
 /// Addition validator for the custom liquid dump support area.
 /// </summary>
+/// <remarks>
+/// Creates the validator with access to the current world entities.
+/// </remarks>
 [GlobalDependency(RegistrationMode.AsEverything, false, false)]
-public sealed class PierLiquidDumpPlacementValidator : IEntityAdditionValidator<LayoutEntityAddRequest> {
+public sealed class PierLiquidDumpPlacementValidator(EntitiesManager entitiesManager) : IEntityAdditionValidator<LayoutEntityAddRequest> {
 
 	#region Fields
 
-	private readonly EntitiesManager m_entitiesManager;
+	private readonly EntitiesManager m_entitiesManager = entitiesManager;
 
-	#endregion
+    #endregion
+    #region Construction
 
-	#region Construction
+    #endregion
 
-	/// <summary>
-	/// Creates the validator with access to the current world entities.
-	/// </summary>
-	public PierLiquidDumpPlacementValidator(EntitiesManager entitiesManager) {
-		m_entitiesManager = entitiesManager;
-	}
+    #region IEntityAdditionValidator
 
-	#endregion
-
-	#region IEntityAdditionValidator
-
-	/// <summary>
-	/// Uses the default validation priority. This keeps the validator compatible with COI's EntityValidatorPriority type.
-	/// </summary>
-	public EntityValidatorPriority Priority => default(EntityValidatorPriority);
+    /// <summary>
+    /// Uses the default validation priority. This keeps the validator compatible with COI's EntityValidatorPriority type.
+    /// </summary>
+    public EntityValidatorPriority Priority => default;
 
 	/// <summary>
 	/// Checks whether the liquid dump is fully supported by compatible pier-wall cells.
