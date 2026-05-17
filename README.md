@@ -26,3 +26,8 @@ The release folder must contain:
 - The liquid dump checks every required support tile individually.
 - Support can be provided by multiple adjacent pier wall entities.
 - The dump processes twice the vanilla amount per recipe cycle.
+
+## AI Assistance Notice
+
+Parts of this mod were developed with support from ChatGPT / GPT-5.5 Thinking by OpenAI.  
+The final design decisions, testing, validation, and release responsibility remain with the mod author.
