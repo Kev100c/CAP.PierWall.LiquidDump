@@ -22,13 +22,13 @@ namespace CAP.PierWall.LiquidDump;
 /// </summary>
 internal static class PierLiquidDumpRules {
 
-	#region Constants
+    #region Constants
 
-	/// <summary>
-	/// ID parts required on a compatible pier wall prototype.
-	/// Adjust these strings if the existing CAP Pier Wall mod uses different prototype IDs.
-	/// </summary>
-	private static readonly string[] CompatiblePierWallIdTokens = [
+    /// <summary>
+    /// ID tokens accepted for compatible pier wall prototypes.
+    /// A wall is compatible when its prototype ID contains any one of these tokens.
+    /// </summary>
+    private static readonly string[] CompatiblePierWallIdTokens = [
 		"PierWallStraight1",
 		"PierWallStraight4",
 		"PierWallCorner",
