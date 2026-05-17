@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("CAP")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1.0+819effedf8a6f99cf2d4c33fbcf094fc8a9ea1d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1.0+e8ecc99e46519c5723f33ae96676b64a72e371d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CAP Pier Wall Liquid Dump")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CAP Pier Wall Liquid Dump")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.1.0")]

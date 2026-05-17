@@ -101,7 +101,7 @@
         </member>
         <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRemovalValidator.SupportsAnyPierLiquidDump(Mafi.Core.Entities.Static.IStaticEntity)">
             <summary>
-            Checks whether any custom liquid dump uses at least one occupied cell from the wall being removed.
+            Checks whether any existing custom pier liquid dump is supported by the supplied wall entity.
             </summary>
         </member>
         <member name="T:CAP.PierWall.LiquidDump.PierLiquidDumpRules">
@@ -130,7 +130,7 @@
         </member>
         <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRules.IsCompatiblePierWall(Mafi.Core.Entities.Static.IStaticEntity)">
             <summary>
-            Returns whether the supplied entity is a compatible CAP Pier Wall support entity.
+            Returns whether the supplied entity is a compatible CAP Pier Wall that can support the custom liquid dump.
             </summary>
         </member>
         <member name="M:CAP.PierWall.LiquidDump.PierLiquidDumpRules.EntityOccupiesTile(Mafi.Core.Entities.Static.IStaticEntity,Mafi.Tile2i)">

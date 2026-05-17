@@ -88,26 +88,32 @@ internal sealed class PierLiquidDumpData : IModData {
 
 		ImmutableArray<ParticlesParams> particlesParams = ImmutableArray.Create(
 			ParticlesParams.Loop(
-				"WasteParticles",
+				"WasteParticles_A",
 				useUtilizationOnAlpha: false,
 				null,
-				(RecipeProto recipe) => recipe.AllInputs.First.Product.Graphics.Color));
+				(RecipeProto recipe) => recipe.AllInputs.First.Product.Graphics.Color),
+            ParticlesParams.Loop(
+                "WasteParticles_B",
+                useUtilizationOnAlpha: false,
+                null,
+                (RecipeProto recipe) => recipe.AllInputs.First.Product.Graphics.Color));
 
-        Option<string> machineSoundPrefabPath = "Assets/CAP/PierWall/LiquidDump/CAP_PierWall_LiquidDump.prefab";
-		//
+        // Reusing the waste dump sound prefab for the pier liquid dump, as it fits thematically and there are no custom sounds needed.
+        Option<string> machineSoundPrefabPath =
+            "Assets/Base/Machines/Water/WasteDump/WasteDump_Sound.prefab";
+        // Note: Instanced rendering is disabled for this machine due to the use of particle effects and potential visual complexity, which may not benefit from instancing and could require unique rendering per instance.
+        MachineProto.Gfx graphics = new(
+            "Assets/CAP/PierWall/LiquidDump/CAP_PierWall_LiquidDump.prefab",
+            categories,
+            prefabOffset,
+            default(Option<string>),
+            particlesParams,
+            default(ImmutableArray<EmissionParams>),
+            machineSoundPrefabPath,
+            useInstancedRendering: false,
+            useSemiInstancedRendering: false);
 
-		MachineProto.Gfx graphics = new(
-            "Assets/Base/Machines/Water/WasteDump/WasteDump_Sound.prefab",
-			categories,
-			prefabOffset,
-			default(Option<string>),
-			particlesParams,
-			default(ImmutableArray<EmissionParams>),
-			machineSoundPrefabPath,
-			useInstancedRendering: false,
-			useSemiInstancedRendering: true);
-
-		return prototypesDb.Add(new OceanLiquidDumpProto(
+        return prototypesDb.Add(new OceanLiquidDumpProto(
 			PierLiquidDumpIds.Machines.PierLiquidDump,
 			strings,
 			layout,
@@ -170,88 +176,89 @@ internal sealed class PierLiquidDumpData : IModData {
 	/// </summary>
 	private static void RegisterRecipes(ProtoRegistrator registrator, OceanLiquidDumpProto machine) {
 		Duration duration = 3.Seconds();
+		int multiplier = 2; // Multiplier to increase the input amounts for a more impactful dumping experience, while still allowing partial execution to be useful for smaller amounts.
 
-		registrator.RecipeProtoBuilder.Start("Water dumping", PierLiquidDumpIds.Recipes.PierWaterDumping, machine)
+        registrator.RecipeProtoBuilder.Start("Water dumping", PierLiquidDumpIds.Recipes.PierWaterDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.Water)
+			.AddInput(10 * multiplier, Ids.Products.Water)
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Brine dumping", PierLiquidDumpIds.Recipes.PierBrineDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.Brine)
+			.AddInput(10 * multiplier, Ids.Products.Brine)
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Waste water dumping", PierLiquidDumpIds.Recipes.PierWasteWaterDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.WasteWater)
-			.AddOutput(10, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.WasteWater)
+			.AddOutput(10 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Sour water dumping", PierLiquidDumpIds.Recipes.PierSourWaterDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.SourWater)
-			.AddOutput(20, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.SourWater)
+			.AddOutput(20 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Acid dumping", PierLiquidDumpIds.Recipes.PierAcidDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.Acid)
-			.AddOutput(20, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.Acid)
+			.AddOutput(20 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Toxic slurry dumping", PierLiquidDumpIds.Recipes.PierToxicSlurryDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.ToxicSlurry)
-			.AddOutput(25, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.ToxicSlurry)
+			.AddOutput(25 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Seawater dumping", PierLiquidDumpIds.Recipes.PierSeawaterDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.Seawater)
+			.AddInput(10 * multiplier, Ids.Products.Seawater)
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Fertilizer dumping", PierLiquidDumpIds.Recipes.PierFertilizerOrganicDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.FertilizerOrganic)
-			.AddOutput(2, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.FertilizerOrganic)
+			.AddOutput(2 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Fertilizer dumping", PierLiquidDumpIds.Recipes.PierFertilizerChem1Dumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.FertilizerChemical)
-			.AddOutput(5, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.FertilizerChemical)
+			.AddOutput(5 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Fertilizer dumping", PierLiquidDumpIds.Recipes.PierFertilizerChem2Dumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.FertilizerChemical2)
-			.AddOutput(10, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.FertilizerChemical2)
+			.AddOutput(10 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();
 
 		registrator.RecipeProtoBuilder.Start("Red mud dumping", PierLiquidDumpIds.Recipes.PierRedMudDumping, machine)
 			.SetProductsDestroyReason(DestroyReason.DumpedOnTerrain)
-			.AddInput(10, Ids.Products.RedMud)
-			.AddOutput(10, Ids.Products.PollutedWater, "VIRTUAL")
+			.AddInput(10 * multiplier, Ids.Products.RedMud)
+			.AddOutput(10 * multiplier, Ids.Products.PollutedWater, "VIRTUAL")
 			.SetDuration(duration)
 			.EnablePartialExecution(1.Percent())
 			.BuildAndAdd();

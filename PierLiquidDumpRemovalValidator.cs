@@ -64,30 +64,40 @@ public sealed class PierLiquidDumpRemovalValidator : IEntityRemovalValidator<ISt
 		return EntityValidationResult.Success;
 	}
 
-	#endregion
+    #endregion
 
-	#region Support Checks
+    #region Support Checks
 
-	/// <summary>
-	/// Checks whether any custom liquid dump uses at least one occupied cell from the wall being removed.
-	/// </summary>
-	private bool SupportsAnyPierLiquidDump(IStaticEntity wallEntity) {
-		foreach (LayoutEntity entity in m_entitiesManager.GetAllEntitiesOfType<LayoutEntity>()) {
-			if (!PierLiquidDumpRules.IsPierLiquidDumpProto(entity.Prototype)) {
-				continue;
-			}
+    /// <summary>
+    /// Checks whether any existing custom pier liquid dump is supported by the supplied wall entity.
+    /// </summary>
+    private bool SupportsAnyPierLiquidDump(IStaticEntity wallEntity)
+    {
+        foreach (LayoutEntity entity in m_entitiesManager.GetAllEntitiesOfType<LayoutEntity>())
+        {
+            if (entity.Id == wallEntity.Id)
+            {
+                continue;
+            }
 
-			foreach (RelTile2i supportTile in PierLiquidDumpRules.RequiredPierWallSupportTiles) {
-				Tile2i worldTile = entity.Prototype.Layout.Transform(supportTile, entity.Transform);
+            if (!PierLiquidDumpRules.IsPierLiquidDumpProto(entity.Prototype))
+            {
+                continue;
+            }
 
-				if (PierLiquidDumpRules.EntityOccupiesTile(wallEntity, worldTile)) {
-					return true;
-				}
-			}
-		}
+            foreach (RelTile2i supportTile in PierLiquidDumpRules.RequiredPierWallSupportTiles)
+            {
+                Tile2i worldTile = entity.Prototype.Layout.Transform(supportTile, entity.Transform);
 
-		return false;
-	}
+                if (PierLiquidDumpRules.EntityOccupiesTile(wallEntity, worldTile))
+                {
+                    return true;
+                }
+            }
+        }
 
-	#endregion
+        return false;
+    }
+
+    #endregion
 }

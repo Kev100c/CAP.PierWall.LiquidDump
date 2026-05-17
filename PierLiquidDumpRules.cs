@@ -64,30 +64,40 @@ internal static class PierLiquidDumpRules {
 			StringComparison.Ordinal);
 	}
 
-	/// <summary>
-	/// Returns whether the supplied entity is a compatible CAP Pier Wall support entity.
-	/// </summary>
-	public static bool IsCompatiblePierWall(IStaticEntity entity) {
-		string id = entity.Prototype.Id.ToString();
+    /// <summary>
+    /// Returns whether the supplied entity is a compatible CAP Pier Wall that can support the custom liquid dump.
+    /// </summary>
+    public static bool IsCompatiblePierWall(IStaticEntity entity)
+    {
+        string id = entity.Prototype.Id.ToString();
 
-		foreach (string requiredPart in PierWallIdRequiredParts) {
-			if (id.IndexOf(requiredPart, StringComparison.OrdinalIgnoreCase) < 0) {
-				return false;
-			}
-		}
+        if (id.Equals(
+                PierLiquidDumpIds.Machines.PierLiquidDump.Value,
+                StringComparison.Ordinal))
+        {
+            return false;
+        }
 
-		return true;
-	}
+        foreach (string requiredPart in PierWallIdRequiredParts)
+        {
+            if (id.IndexOf(requiredPart, StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                return false;
+            }
+        }
 
-	#endregion
+        return true;
+    }
 
-	#region Occupancy Checks
+    #endregion
 
-	/// <summary>
-	/// Returns whether an entity occupies the supplied world tile on the XY plane.
-	/// The support rule intentionally checks cells instead of requiring one specific Pier Wall entity.
-	/// </summary>
-	public static bool EntityOccupiesTile(IStaticEntity entity, Tile2i worldTile) {
+    #region Occupancy Checks
+
+    /// <summary>
+    /// Returns whether an entity occupies the supplied world tile on the XY plane.
+    /// The support rule intentionally checks cells instead of requiring one specific Pier Wall entity.
+    /// </summary>
+    public static bool EntityOccupiesTile(IStaticEntity entity, Tile2i worldTile) {
 		foreach (OccupiedTileRelative occupiedTile in entity.OccupiedTiles) {
 			Tile2i occupiedWorldTile = entity.CenterTile.Xy + occupiedTile.RelCoord;
 
