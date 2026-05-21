@@ -1,33 +1,91 @@
 # CAP Pier Wall Liquid Dump
 
-Adds a custom liquid dump for Captain of Industry that requires CAP Pier Wall support tiles.
+A mod for "Captain of Industry" that adds a liquid dump that must be built on CAP Pier Wall support tiles.
 
-## Requirements
+**Version: `1.0.0`**  
+**Tested up to: `0.8.4b`**  
+**Requires: `PierWallMod`**
 
-- Captain of Industry
-- PierWallMod / CAP Pier Wall
+## Features
 
-## Install
+- Adds a pier-wall liquid dump for dumping liquids into the ocean from a pier wall.
+- Requires CAP Pier Wall support under the marked 2 x 4 support area.
+- Works with compatible CAP Pier Wall variants:
+  - Pier Wall (short)
+  - Pier Wall (long)
+  - Pier Wall (corner)
+  - Pier Wall (cross)
+  - Pier Wall (tee)
+- Supports placement across multiple pier wall segments, so the support area can span segment seams.
+- Prevents supported pier wall tiles from being removed while a pier-wall liquid dump depends on them.
+- Adds a research node to unlock the pier-wall liquid dump after the CAP Pier Walls research.
+- Uses a custom model, custom icon, liquid-colored particle effects, and the vanilla waste-dump sound.
+- Uses no electricity.
 
-Copy the release folder to:
+## Supported Dumping Recipes
 
-%APPDATA%/Captain of Industry/Mods/CAP-PierWall-LiquidDump
+- Water
+- Brine
+- Waste water
+- Sour water
+- Acid
+- Toxic slurry
+- Seawater
+- Organic fertilizer
+- Chemical fertilizer I
+- Chemical fertilizer II
+- Red mud
 
-The release folder must contain:
+## Installation
+
+Extract the mod ZIP to:
+
+```text
+%APPDATA%\Captain of Industry\Mods\CAP-PierWall-LiquidDump
+```
+
+Make sure the required dependency `PierWallMod` is installed and enabled.
+
+The mod folder should contain:
 
 - manifest.json
 - config.json
 - CAP.PierWall.LiquidDump.dll
 - AssetBundles/
-- README.md
+- README.txt
 
-## Notes
+## Compatibility with Save Games
 
-- The liquid dump checks every required support tile individually.
-- Support can be provided by multiple adjacent pier wall entities.
-- The dump processes twice the vanilla amount per recipe cycle.
+This mod can be added to an existing save game.
 
-## AI Assistance Notice
+Removing the mod from an existing save file is not supported, as the save file may contain pier-wall liquid dump entities registered by the mod.
 
-Parts of this mod were developed with support from ChatGPT / GPT-5.5 Thinking by OpenAI.  
-The final design decisions, testing, validation, and release responsibility remain with the mod author.
+## Configuration
+
+This mod currently has no custom configuration options.
+
+## Build from Source
+
+The project targets `.NET Framework 4.8` and references the Captain of Industry managed assemblies.
+
+To build locally:
+
+1. Set `COI_ROOT` to your Captain of Industry installation directory.
+2. Open `CAP.PierWall.LiquidDump.sln` or `CAP.PierWall.LiquidDump.slnx`.
+3. Build the project.
+
+When deployment is enabled, the build process copies the mod files to:
+
+```text
+%APPDATA%\Captain of Industry\Mods\CAP-PierWall-LiquidDump
+```
+
+## Note on AI Support
+
+Parts of this mod were developed with the support of ChatGPT / GPT-5.5 Thinking from OpenAI.
+
+## License
+
+This mod is licensed under the Captain of Industry Open License (COI-Open) 1.0.
+
+See the `LICENSE` file for details.

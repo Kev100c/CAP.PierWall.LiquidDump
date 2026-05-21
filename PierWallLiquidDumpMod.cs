@@ -12,6 +12,7 @@ using Mafi.Base;
 using Mafi.Collections;
 using Mafi.Core;
 using Mafi.Core.Mods;
+using Mafi.Core.Research;
 
 #endregion
 
@@ -42,7 +43,8 @@ public sealed class PierWallLiquidDumpMod : DataOnlyMod {
 		Log.Info("CAP.PierWall.LiquidDump: registering prototypes");
 
 		registrator.RegisterData<PierLiquidDumpData>();
-	}
+        registrator.RegisterDataWithInterface<IResearchNodesData>();
+    }
 
 	#endregion
 
@@ -52,7 +54,7 @@ public sealed class PierWallLiquidDumpMod : DataOnlyMod {
 	/// Handles JSON configuration migrations between mod versions.
 	/// </summary>
 	public override void MigrateJsonConfig(VersionSlim savedVersion, Dict<string, object> savedValues) {
-		// No custom configuration fields are used in version 0.0.1.
+		// No custom configuration fields are used.
 	}
 
 	#endregion

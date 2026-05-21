@@ -54,16 +54,16 @@ internal sealed class PierLiquidDumpData : IModData {
 	private static OceanLiquidDumpProto RegisterMachine(ProtoRegistrator registrator) {
 		ProtosDb prototypesDb = registrator.PrototypesDb;
 
-		Proto.Str strings = Proto.CreateStrFormatDesc1(
-			PierLiquidDumpIds.Machines.PierLiquidDump,
-			"Pier wall liquid dump",
-			"Dumps liquids into the ocean from a CAP Pier Wall. Requires CAP Pier Wall support under the marked support area. Works at the maximum height of {0} from the ocean level.",
-			new LocStrFormatted(11.ToString()),
-			"{0} is an integer specifying max height such as '5'");
+        Proto.Str strings = Proto.CreateStr(
+            PierLiquidDumpIds.Machines.PierLiquidDump,
+            "Pier wall liquid dump",
+            LocalizationManager.CreateAlreadyLocalizedStr(
+                $"{PierLiquidDumpIds.Machines.PierLiquidDump.Value}__desc",
+                "Dumps liquids into the ocean from a Pier Wall. Requires Pier Wall support under the marked support area."));
 
-		EntityLayout layout = CreateLayout(registrator);
-		EntityCosts costs = Costs.Machines.WasteWaterPump.MapToEntityCosts(registrator);
-		Electricity consumedPowerPerTick = Electricity.Zero;
+        EntityLayout layout = CreateLayout(registrator);
+		EntityCosts costs = ((EntityCostsTpl)Costs.Build.CP2(20)).MapToEntityCosts(registrator);
+        Electricity consumedPowerPerTick = Electricity.Zero;
 		ImmutableArray<AnimationParams> animationParams = ImmutableArray<AnimationParams>.Empty;
 
 		// Ocean area behind the pier wall: 2 tiles wide and 4 tiles long.
@@ -82,8 +82,8 @@ internal sealed class PierLiquidDumpData : IModData {
 			0);
 
 		ImmutableArray<ToolbarEntryData> categories = ImmutableArray.Create(
-			registrator.GetCategory(Ids.ToolbarCategories.Waste_Fluid),
-			registrator.GetCategory(Ids.ToolbarCategories.Oil_Basic),
+			registrator.GetCategory(Ids.ToolbarCategories.Waste_Fluid, doesNotUnlock: true),
+			registrator.GetCategory(Ids.ToolbarCategories.Oil_Basic, doesNotUnlock: true),
 			registrator.GetCategory(Ids.ToolbarCategories.Transports_Fluid, doesNotUnlock: true));
 
 		ImmutableArray<ParticlesParams> particlesParams = ImmutableArray.Create(
@@ -156,14 +156,14 @@ internal sealed class PierLiquidDumpData : IModData {
 					new(
 						"~~~",
 						(EntityLayoutParams p, int h) => new LayoutTokenSpec(
-							heightFrom: 0,
-							heightToExcl: 1,
+							heightFrom: -11,
+							heightToExcl: -10,
 							constraint: LayoutTileConstraint.Ocean)),
 					new(
 						"(S)",
 						(EntityLayoutParams p, int h) => new LayoutTokenSpec(
-							heightFrom: 1,
-							heightToExcl: 2,
+							heightFrom: -11,
+							heightToExcl: -10,
 							constraint: LayoutTileConstraint.None))
 				}),
             "~~~~~~(S)(S)[2][2]         ",

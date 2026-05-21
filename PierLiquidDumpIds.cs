@@ -10,6 +10,7 @@
 using Mafi.Base;
 using MachineID = Mafi.Core.Factory.Machines.MachineProto.ID;
 using RecipeID = Mafi.Core.Factory.Recipes.RecipeProto.ID;
+using ResearchNodeID = Mafi.Core.Research.ResearchNodeProto.ID;
 
 #endregion
 
@@ -55,5 +56,32 @@ public static partial class PierLiquidDumpIds {
 		public static readonly RecipeID PierRedMudDumping = Ids.Recipes.CreateId("CAP_PierWall_RedMudDumping");
 	}
 
-	#endregion
+    #endregion
+
+    #region Research IDs
+
+    /// <summary>
+    /// Research IDs created by this mod.
+    /// </summary>
+    public static partial class Research
+    {
+        public static readonly ResearchNodeID UnlockPierWallLiquidDump =
+            Ids.Research.CreateId("UnlockPierWallLiquidDump");
+    }
+
+    /// <summary>
+    /// Research IDs provided by required dependency mods.
+    /// </summary>
+    public static partial class ExternalResearch
+    {
+
+        /// <summary>
+        /// Research node from PierWallMod.
+        /// Keep this value in sync with the CAP Pier Wall mod.
+        /// </summary>
+        public static readonly ResearchNodeID UnlockPierWalls =
+            Ids.Research.CreateId("UnlockPierWalls");
+    }
+
+    #endregion
 }
