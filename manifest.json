@@ -1,7 +1,7 @@
 {
   "id": "CAP-PierWall-LiquidDump",
-  "version": "1.0.0",
-  "display_name": "CAP Pier Wall Liquid Dump",
+  "version": "1.0.1",
+  "display_name": "CAP.PierWall.LiquidDump",
   "description_short": "Adds a liquid dump that requires CAP Pier Wall support tiles.",
   "authors": [ "CAP" ],
   "primary_dlls": [ "CAP.PierWall.LiquidDump.dll" ],
@@ -10,6 +10,6 @@
   "can_add_to_saved_game": true,
   "can_remove_from_saved_game": false,
   "primary_mod_class_name": "CAP.PierWall.LiquidDump.PierWallLiquidDumpMod",
-  "min_game_version": "0.8.4b",
-  "max_verified_game_version": "0.8.4b"
+  "min_game_version": "0.8.6a",
+  "max_verified_game_version": "0.8.6a"
 }

@@ -195,6 +195,7 @@
 		<Copy SourceFiles="$(ProjectDir)\manifest.json" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump\" />
 		<Copy SourceFiles="$(ProjectDir)\config.json" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump" ContinueOnError="true" />
 		<Copy SourceFiles="$(ProjectDir)\readme.txt" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump" ContinueOnError="true" />
+    <Copy SourceFiles="$(ProjectDir)\thumbnail.png" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump" ContinueOnError="true" />
 		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump\" />
 		<Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump\" Condition="'$(Configuration)' == 'Debug'" />
 		<Copy SourceFiles="@(AssetBundles)" DestinationFolder="$(COI_MODS)\CAP-PierWall-LiquidDump\AssetBundles" />

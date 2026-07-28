@@ -2,8 +2,8 @@
 
 A mod for "Captain of Industry" that adds a liquid dump that must be built on CAP Pier Wall support tiles.
 
-**Version: `1.0.0`**  
-**Tested up to: `0.8.4b`**  
+**Version: `1.0.1`**  
+**Tested up to: `0.8.6a`**  
 **Requires: `PierWallMod`**
 
 ## Features
@@ -36,6 +36,13 @@ A mod for "Captain of Industry" that adds a liquid dump that must be built on CA
 - Chemical fertilizer II
 - Red mud
 
+## How to Build
+
+- Create a coastline with a maximum height of 3.
+- Place the pier wall along the coastline.
+- Dig down to at least -2 on the water side of the pier wall.
+- Place the LiquidDump
+
 ## Installation
 
 Extract the mod ZIP to:
@@ -53,6 +60,7 @@ The mod folder should contain:
 - CAP.PierWall.LiquidDump.dll
 - AssetBundles/
 - README.txt
+- thumbnail.png
 
 ## Compatibility with Save Games
 
